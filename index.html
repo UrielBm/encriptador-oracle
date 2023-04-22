@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Es un reto parte de Oracle One y alura-latam acerca de un encriptador.">
+    <meta name="keywords" content="HTML, CSS, JavaScript,Encriptador">
+    <meta name="author" content="Uriel Benítez Medina.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <!-- styles-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/ico" href="assets/favicon.ico"/>
+    <!-- Android -->
+    <meta name="theme-color" content="#e5e5e5">
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-256x256.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/icons/icon-128x128.png">
+
+    <!-- iPhone X (1125px x 2436px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="assets/icons-ios/apple-launch-1125x2436.png">
+    <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="assets/icons-ios/apple-launch-750x1334.png">
+    <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)" href="assets/icons-ios/apple-launch-1242x2208.png">
+    <!-- iPhone 5 (640px x 1136px) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="assets/icons-ios/apple-launch-640x1136.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Enigma!">
+    <!-- OG:Tags-->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Encripador de textos"/>
+    <meta property="og:description" content="Es el primer reto de Oracle-ONE y alura-latam acerca de crear un encriptador de textos."/>
+    <!-- <meta property="og:url" content="" /> -->
+    <meta property="og:image" content="https://raw.githubusercontent.com/EduardoUT/Portafolio_Web-Oracle-ONE-Challenge/master/assets/img/readme/challengeImage.jpg" />
+    <meta property="twitter:card" content="app" />
+    <meta property="twitter:creator" content="@CouthUriel" />
+    <meta property="twitter:title" content="Encriptador de textos" />
+    <meta property="twitter:description" content="Es el primer reto de Oracle-ONE y alura-latam acerca de crear un encriptador de textos." />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/EduardoUT/Portafolio_Web-Oracle-ONE-Challenge/master/assets/img/readme/challengeImage.jpg" />
+
+
+</head>
+<body>
+    <header class="header">
+       <img  src="./assets/logo.svg" alt="logo" class="logo" />
+       <h1 class="title">Enimesgmai-て</h1>
+        <button id="btnCrear">Asignar secretKey</button>
+    </header>
+    <main class="main">
+            <section class="wrapperinput">
+                <form id="form">
+                    <div class="wrapperInputsSecret" id="wrapperSecret">
+                        <div class="inputSecret">
+                            <label for="vowela">llave para vocal "a":</label>
+                            <input type="text" name="vowelA" id="vowela" placeholder="encripta vocal a" required maxlength="4" minlength="2" />
+                        </div>
+                        <div class="inputSecret">
+                            <label for="vowela">llave para vocal "e":</label>
+                            <input type="text" name="vowelE" id="vowele" placeholder="encripta vocal e" required maxlength="4" minlength="2" />
+                        </div>
+                        <div class="inputSecret">
+                            <label for="vowela">llave para vocal "i":</label>
+                            <input type="text" name="vowelI" id="voweli" placeholder="encripta vocal i" required maxlength="4" minlength="2" />
+                        </div>
+                        <div class="inputSecret">
+                            <label for="vowela">llave para vocal "o":</label>
+                            <input type="text" name="vowelO" id="vowelo" placeholder="encripta vocal o" required maxlength="4" minlength="2" />
+                        </div>
+                        <div class="inputSecret">
+                            <label for="vowela">llave para vocal "u":</label>
+                            <input type="text" name="vowelU" id="vowelu" placeholder="encripta vocal u" required maxlength="4" minlength="2" />
+                        </div>
+                        <button type="submit" class="submitButton">Enviar llave</button>
+                    </div>
+                    <textarea placeholder="Ingrese su texto aquí" id="textbox"></textarea>
+                </form>
+                <div class="alert"><img src="./assets/alertIcon.svg" class="icon"/><p id="alert">letras minúsculas y sin acentos</p></div>
+                <div class="wrapperButtons">
+                    <button class="actionButton" id="buttonEncrypt">Encriptar</button>
+                    <button class="actionButton" id="buttonDisabled">Desencriptar</button>
+                </div>
+            </section>
+            <aside class="encript">
+                <div class="card">
+                    <picture>
+                        <source srcset="./assets/img_looking.avif" type="image/avif">
+                        <source srcset="./assets/img_looking.webp" type="image/webp">
+                        <img src="./assets/img_looking.png" alt="img looking a text" class="img_looking" id="imgCard">
+                       </picture>                       
+                    <strong id="titleCard">Ningún mensaje fue encontrado</strong>
+                    <p id="message">Ingrese un texto que desees encriptar o desencriptar</p>
+                    <button class="copyButton" id="copyButton" disabled>Copiar</button>
+                    <button class="copyButton" id="copyKey" disabled>Copiar LLave</button>
+                </div>
+            </aside>
+    </main>
+    <footer class="footer">
+        <p>Elaborado por: Uriel Benítez Medina.<a href="https://github.com/UrielBm" target="_blank"><img src="./assets/github-mark.svg" alt="github" class="github" /></a></p>
+    </footer>
+</body>
+<script src="./js/app.js"></script> 
+<script src="./js/helpers.js"></script> 
+<script src="./js/index.js"></script> 
+</html>
