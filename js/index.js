@@ -38,11 +38,11 @@ const handleSendSecretKey = () => {
     wrapperForm.classList.remove("visible");
     inputValue.classList.remove("hidden");
     ownSecretKey = JSON.stringify({
-      a: password[a],
-      e: password[e],
-      i: password[i],
-      o: password[o],
-      u: password[u],
+      a: password["a"],
+      e: password["e"],
+      i: password["i"],
+      o: password["o"],
+      u: password["u"],
     });
   } else {
     handleActivateAlert("Valida tus llaves, No mayúsculas y acentos", true);
